@@ -1,0 +1,5 @@
+import os
+
+# Read data from Raspberry Pi (specifically read GPU temperature)
+temp = os.popen("/opt/vc/bin/vcgencmd measure_temp").read()
+print("GPU temperature is {}".format(temp[5:]))
